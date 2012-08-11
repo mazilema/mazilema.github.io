@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://mazilema.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: OS X | My Octopress Blog]]></title>
+  <link href="http://mazilema.github.com/blog/categories/os-x/atom.xml" rel="self"/>
   <link href="http://mazilema.github.com/"/>
   <updated>2012-08-11T11:55:45+02:00</updated>
   <id>http://mazilema.github.com/</id>
@@ -23,7 +23,7 @@
 <!-- more -->
 
 
-<h2>Let&#8217;s start with the easy part:</h2>
+<h2>Let's start with the easy part:</h2>
 
 <h3>OS X Mountain Lion: Enable and disable the root user</h3>
 
@@ -41,9 +41,9 @@
 
 <p><a href="http://support.apple.com/kb/PH11331">Source: http://support.apple.com/kb/PH11331</a></p>
 
-<h2>Now it&#8217;s time to get dirty:</h2>
+<h2>Now it's time to get dirty:</h2>
 
-<p>I had to go through this step twice as my short name was already &#8220;mazilema&#8221; but my home directory was &#8220;mazilema 1&#8221;. So I renamed it to &#8220;mazilemas&#8221; and set up the corresponding user because the system does not  allow you to use a existing one. In the second run I then set &#8220;mazilema&#8221; as short name and home directory name.</p>
+<p>I had to go through this step twice as my short name was already "mazilema" but my home directory was "mazilema 1". So I renamed it to "mazilemas" and set up the corresponding user because the system does not  allow you to use a existing one. In the second run I then set "mazilema" as short name and home directory name.</p>
 
 <p>I suppose there is a easier way with just renaming the home directory and some re-configuration. I would appreciate any hint on this for the next time.</p>
 
@@ -58,12 +58,12 @@
 <li>Select the Home folder with the short name you want to change, and rename it just like you would rename any folder. Keep in mind that the shortname must be all lowercase, with no spaces, and only contain letters.</li>
 <li>Use the Users &amp; Groups pane (Accounts pane in Mac OS X v10.6.8 or earlier) in System Preferences to create a new user with the Account name or Short Name that you used in the previous step.<br/>
 Note: As root, my keyboard layout switched to english so be carfeul when you set your password.</li>
-<li>Click OK when &#8220;A folder in the Users folder already has the name &#8216;account name&#8217;. Would you like to use that folder as the Home folder for this user account?&#8221; appears. Note: This will correct the ownership of all files in the Home folder, and avoid permissions issues with the contents.</li>
+<li>Click OK when "A folder in the Users folder already has the name 'account name'. Would you like to use that folder as the Home folder for this user account?" appears. Note: This will correct the ownership of all files in the Home folder, and avoid permissions issues with the contents.</li>
 <li>Choose Log Out from the Apple menu.</li>
 <li>Log in as the newly created user. You should be able to access all of your original files (on the desktop, in Documents, and in the other folders of this Home).
 Note: If you chose a different password, you will be promted how to handle your keychain.</li>
 <li>After verifying that your data is as expected, you can delete the original user account via the Users &amp; Groups pane (Accounts pane in Mac OS X v10.6.8 or earlier).
-Note: You will have to reconfigure some applications like Dropbox, Steam, 1Password as the path changed.. You may also run into trouble with Skype and high cpu usage. In this case you may try: Close Skype. Delete or rename &#8220;~/Library/Caches/com.skype.skype&#8221;. Reopen Skype. <a href="http://community.skype.com/t5/Mac/Skype-heat-fan-high-cpu-usage-issues-in-Lion-OSX/td-p/41264/page/2">Source:</a></li>
+Note: You will have to reconfigure some applications like Dropbox, Steam, 1Password as the path changed.. You may also run into trouble with Skype and high cpu usage. In this case you may try: Close Skype. Delete or rename "~/Library/Caches/com.skype.skype". Reopen Skype. <a href="http://community.skype.com/t5/Mac/Skype-heat-fan-high-cpu-usage-issues-in-Lion-OSX/td-p/41264/page/2">Source:</a></li>
 <li>Disable the root user.</li>
 </ol>
 

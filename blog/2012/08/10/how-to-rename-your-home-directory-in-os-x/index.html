@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to rename your home directory in OS X - My Octopress Blog</title>
+  <meta name="author" content="mazilema">
+
+  
+  <meta name="description" content="How to Rename Your Home Directory in OS X Aug 10th, 2012 I tried to install RVM on my machine to set up octopress and ended up with an error (again &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mazilema.github.com/blog/2012/08/10/how-to-rename-your-home-directory-in-os-x/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mazilema.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">How to Rename Your Home Directory in OS X</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-10T19:17:00+02:00" pubdate data-updated="true">Aug 10<span>th</span>, 2012</time></p>
+  </header>
+  
+  <p>I tried to install RVM on my machine to set up <a href="http://octopress.org">octopress</a> and ended up with an error (again) because my home directory name has  a space in it. This happend when I restored my account from Timemachine and just renaming the home directory did not work. So now it was time to repair this oddness.</p>
+
+<!-- more -->
+
+
+<h2>Let&#8217;s start with the easy part:</h2>
+
+<h3>OS X Mountain Lion: Enable and disable the root user</h3>
+
+<ul>
+<li>Choose Apple menu > System Preferences, and then click Users &amp; Groups.</li>
+<li>Click the lock icon to unlock it, and then type an administrator name and password.</li>
+<li>In the Network Account Server section, click Join or Edit.</li>
+<li>Click Open Directory Utility.</li>
+<li>Click the lock icon to unlock it, and then enter your administrator name and password.</li>
+<li>Choose Edit > Enable Root User, and then enter a root user password in the Password and Verify fields.</li>
+</ul>
+
+
+<p>Be sure to specify a secure password.</p>
+
+<p><a href="http://support.apple.com/kb/PH11331">Source: http://support.apple.com/kb/PH11331</a></p>
+
+<h2>Now it&#8217;s time to get dirty:</h2>
+
+<p>I had to go through this step twice as my short name was already &#8220;mazilema&#8221; but my home directory was &#8220;mazilema 1&#8221;. So I renamed it to &#8220;mazilemas&#8221; and set up the corresponding user because the system does not  allow you to use a existing one. In the second run I then set &#8220;mazilema&#8221; as short name and home directory name.</p>
+
+<p>I suppose there is a easier way with just renaming the home directory and some re-configuration. I would appreciate any hint on this for the next time.</p>
+
+<h3>OS X: How to change user account name or home directory name</h3>
+
+<p>For Mac OS X v10.5 or later</p>
+
+<ol>
+<li>Enable the root user.</li>
+<li>Log in as root.</li>
+<li>Navigate to the /Users folder.</li>
+<li>Select the Home folder with the short name you want to change, and rename it just like you would rename any folder. Keep in mind that the shortname must be all lowercase, with no spaces, and only contain letters.</li>
+<li>Use the Users &amp; Groups pane (Accounts pane in Mac OS X v10.6.8 or earlier) in System Preferences to create a new user with the Account name or Short Name that you used in the previous step.<br/>
+Note: As root, my keyboard layout switched to english so be carfeul when you set your password.</li>
+<li>Click OK when &#8220;A folder in the Users folder already has the name &#8216;account name&#8217;. Would you like to use that folder as the Home folder for this user account?&#8221; appears. Note: This will correct the ownership of all files in the Home folder, and avoid permissions issues with the contents.</li>
+<li>Choose Log Out from the Apple menu.</li>
+<li>Log in as the newly created user. You should be able to access all of your original files (on the desktop, in Documents, and in the other folders of this Home).
+Note: If you chose a different password, you will be promted how to handle your keychain.</li>
+<li>After verifying that your data is as expected, you can delete the original user account via the Users &amp; Groups pane (Accounts pane in Mac OS X v10.6.8 or earlier).
+Note: You will have to reconfigure some applications like Dropbox, Steam, 1Password as the path changed.. You may also run into trouble with Skype and high cpu usage. In this case you may try: Close Skype. Delete or rename &#8220;~/Library/Caches/com.skype.skype&#8221;. Reopen Skype. <a href="http://community.skype.com/t5/Mac/Skype-heat-fan-high-cpu-usage-issues-in-Lion-OSX/td-p/41264/page/2">Source:</a></li>
+<li>Disable the root user.</li>
+</ol>
+
+
+<p><a href="http://support.apple.com/kb/HT1428">Source: http://support.apple.com/kb/HT1428</a></p>
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-10T19:17:00+02:00" pubdate data-updated="true">Aug 10<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/os-x/'>OS X</a>
+  
+</span>
+
+
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mazilema.github.com/blog/2012/08/10/how-to-rename-your-home-directory-in-os-x/" data-via="mazilema" data-counturl="http://mazilema.github.com/blog/2012/08/10/how-to-rename-your-home-directory-in-os-x/" >Tweet</a>
+  
+  
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/10/how-to-rename-your-home-directory-in-os-x/">How to rename your home directory in OS X</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/mazilema">@mazilema</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'mazilema',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("mazilema", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/mazilema" class="twitter-follow-button" data-show-count="false">Follow @mazilema</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - mazilema -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
