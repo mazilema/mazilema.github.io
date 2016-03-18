@@ -9,3 +9,6 @@ sharing: true
 footer: true
 ---
 and replacing my MacBooPro every day a little more.
+
+<!-- more -->
+tbc
